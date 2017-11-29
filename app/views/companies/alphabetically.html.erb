@@ -1,32 +1,4 @@
 <div class='container'>
-<h1> Companies Alphabetically </h1>
-<table class="table table-bordered">
-  <thead class="thead-dark">
-    <tr>
-    <th scope="col"> Company Name </th>
-    <th scope="col">Trial Status</th>
-    <th scope="col">Plan Level</th>
-    <tr>
-  </thead>
-  <%@companies.each do |company|%>
-  <tbody>
-  <tr class="bg-secondary">
-    <th><%= company.name %></th>
-    <td><%= company.trial_status %></td>
-    <td><%= company.plan_level %></td>
-    </tbody>
-    <tbody>
-      <thead >
-      <tr class='bg-light'><th>Lessons</th></tr>
-    </thead>
-      <%company.lessons.each do |lesson| %>
-        <tr><td><%=lesson.name%></td></tr>
-        <%end%>
-    </tbody>
-  </tr>
-  <tr class="blank_row">
-    <td colspan="5"></td>
-</tr>
-    <% end %>
-</table>
+  <h1> Companies Alphabetically </h1>
+  <%= render 'table_partial'%>
 </div>
