@@ -5,7 +5,8 @@ plan_levels = ['legacy','custom','basic','plus','growth','enterprise']
   Company.create(
     name: Faker::Company.name,
     trial_status: Faker::Date.between(3.years.ago, 1.year.from_now),
-    plan_level: plan_levels.sample
+    plan_level: plan_levels.sample,
+    created_at: Faker::Date.between(3.years.ago, 1.year.from_now)
   )
 end
 
